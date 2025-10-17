@@ -38,10 +38,10 @@ export default function Upload() {
         return
       }
 
-      // Validate file size (max 100MB)
-      const maxSize = 100 * 1024 * 1024 // 100MB in bytes
+      // Validate file size (max 50MB - Vercel limit)
+      const maxSize = 50 * 1024 * 1024 // 50MB in bytes
       if (selectedFile.size > maxSize) {
-        setError('File size must be less than 100MB')
+        setError('File size must be less than 50MB. For larger files, please email us directly at stephen.rx782@gmail.com')
         setFile(null)
         return
       }
@@ -89,6 +89,12 @@ export default function Upload() {
         body: submitData,
       })
 
+      // Check if response is JSON
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        throw new Error('Server error. Please try a smaller file or contact us directly.')
+      }
+
       const result = await response.json()
 
       if (!response.ok) {
@@ -98,7 +104,8 @@ export default function Upload() {
       // Redirect to thank you page on success
       router.push('/thank-you')
     } catch (err) {
-      setError(err.message || 'Something went wrong. Please try again.')
+      console.error('Submission error:', err)
+      setError(err.message || 'Something went wrong. Please try again with a smaller file or contact us directly.')
       setIsSubmitting(false)
     }
   }
@@ -223,7 +230,10 @@ export default function Upload() {
                     <p className="pl-1">or drag and drop</p>
                   </div>
                   <p className="text-xs text-gray-500">
-                    STL, OBJ, PNG, JPG, ZIP up to 100MB
+                    STL, OBJ, PNG, JPG, ZIP up to 50MB
+                  </p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    For files larger than 50MB, email stephen.rx782@gmail.com
                   </p>
                   {file && (
                     <p className="text-sm text-primary font-semibold mt-2">

@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "app/api/enquiry/route.js": {
+      "maxDuration": 60
+    }
+  },
+  "api": {
+    "bodyParser": {
+      "sizeLimit": "100mb"
+    }
+  }
+}
+

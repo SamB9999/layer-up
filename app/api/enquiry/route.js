@@ -4,6 +4,10 @@ import { NextResponse } from 'next/server'
 // Initialize Resend with API key from environment variables
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+// Configure route to handle large files
+export const runtime = 'nodejs'
+export const maxDuration = 60
+
 // POST handler for enquiry form submissions
 export async function POST(request) {
   try {
