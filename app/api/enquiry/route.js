@@ -1,9 +1,6 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-// Initialize Resend with API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // Configure route to handle large files
 export const runtime = 'nodejs'
 export const maxDuration = 60
@@ -11,6 +8,9 @@ export const maxDuration = 60
 // POST handler for enquiry form submissions
 export async function POST(request) {
   try {
+    // Initialize Resend at runtime (not at build time)
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    
     // Parse form data
     const formData = await request.formData()
     const name = formData.get('name')
