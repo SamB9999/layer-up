@@ -12,9 +12,9 @@ export default function Home() {
             <Image
               src="/logo.png"
               alt="Layer Up Logo"
-              width={200}
-              height={200}
-              className="w-auto h-32 sm:h-40 object-contain"
+              width={400}
+              height={400}
+              className="w-auto h-48 sm:h-64 md:h-72 object-contain"
               priority
             />
           </div>
