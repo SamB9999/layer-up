@@ -38,10 +38,10 @@ export default function Upload() {
         return
       }
 
-      // Validate file size (max 10MB)
-      const maxSize = 10 * 1024 * 1024 // 10MB in bytes
+      // Validate file size (max 100MB)
+      const maxSize = 100 * 1024 * 1024 // 100MB in bytes
       if (selectedFile.size > maxSize) {
-        setError('File size must be less than 10MB')
+        setError('File size must be less than 100MB')
         setFile(null)
         return
       }
@@ -223,7 +223,7 @@ export default function Upload() {
                     <p className="pl-1">or drag and drop</p>
                   </div>
                   <p className="text-xs text-gray-500">
-                    STL, OBJ, PNG, JPG, ZIP up to 10MB
+                    STL, OBJ, PNG, JPG, ZIP up to 100MB
                   </p>
                   {file && (
                     <p className="text-sm text-primary font-semibold mt-2">
