@@ -40,14 +40,14 @@ A modern, responsive website for a 3D printing business built with Next.js and T
    ```
 
 3. **Set up environment variables**:
+   Create a `.env.local` file in the root directory:
    ```bash
-   cp .env.local.example .env.local
+   echo "RESEND_API_KEY=your_actual_resend_api_key_here" > .env.local
    ```
    
-   Then edit `.env.local` and add your Resend API key:
-   ```
-   RESEND_API_KEY=your_actual_resend_api_key_here
-   ```
+   Then edit `.env.local` and replace with your actual Resend API key.
+   
+   See `SETUP.md` for detailed setup instructions.
 
 4. **Run the development server**:
    ```bash
