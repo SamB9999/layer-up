@@ -10,6 +10,15 @@ export const revalidate = 0
 // POST handler for enquiry form submissions
 export async function POST(request) {
   try {
+    // Check if API key exists
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set in environment variables')
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact stephen.rx782@gmail.com directly.' },
+        { status: 500 }
+      )
+    }
+
     // Initialize Resend at runtime (not at build time)
     const resend = new Resend(process.env.RESEND_API_KEY)
     
@@ -201,8 +210,12 @@ Please respond to ${email} to continue the conversation.
 
     if (error) {
       console.error('Resend API error:', error)
+      console.error('Error details:', JSON.stringify(error))
       return NextResponse.json(
-        { error: 'Failed to send email. Please try again later.' },
+        { 
+          error: 'Failed to send email. Please email stephen.rx782@gmail.com directly.',
+          details: error.message || 'Unknown error'
+        },
         { status: 500 }
       )
     }
@@ -219,8 +232,12 @@ Please respond to ${email} to continue the conversation.
 
   } catch (error) {
     console.error('Error processing enquiry:', error)
+    console.error('Error stack:', error.stack)
     return NextResponse.json(
-      { error: 'An unexpected error occurred. Please try again later.' },
+      { 
+        error: 'An unexpected error occurred. Please email stephen.rx782@gmail.com directly.',
+        details: error.message
+      },
       { status: 500 }
     )
   }
