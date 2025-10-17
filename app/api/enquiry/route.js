@@ -200,7 +200,7 @@ Please respond to ${email} to continue the conversation.
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Layer Up Website <onboarding@resend.dev>', // Use your verified domain in production
-      to: ['stephen.rx782@gmail.com'],
+      to: ['sam.bousounis@gmail.com'], // Change to stephen.rx782@gmail.com after verifying in Resend
       replyTo: email,
       subject: `New 3D Printing Enquiry from ${name}`,
       html: emailHtml,
