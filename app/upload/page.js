@@ -38,10 +38,10 @@ export default function Upload() {
         return
       }
 
-      // Validate file size (max 50MB - Vercel limit)
-      const maxSize = 50 * 1024 * 1024 // 50MB in bytes
+      // Validate file size (max 4MB - Vercel serverless limit)
+      const maxSize = 4 * 1024 * 1024 // 4MB in bytes
       if (selectedFile.size > maxSize) {
-        setError('File size must be less than 50MB. For larger files, please email us directly at stephen.rx782@gmail.com')
+        setError('File size must be under 4MB for web upload. For larger files (like STL models), please email them directly to stephen.rx782@gmail.com')
         setFile(null)
         return
       }
@@ -230,10 +230,13 @@ export default function Upload() {
                     <p className="pl-1">or drag and drop</p>
                   </div>
                   <p className="text-xs text-gray-500">
-                    STL, OBJ, PNG, JPG, ZIP up to 50MB
+                    PNG, JPG images up to 4MB
                   </p>
-                  <p className="text-xs text-gray-400 mt-1">
-                    For files larger than 50MB, email stephen.rx782@gmail.com
+                  <p className="text-xs text-gray-600 font-semibold mt-2 p-2 bg-blue-50 rounded">
+                    📧 For STL/OBJ files or large files, please email directly to:<br/>
+                    <a href="mailto:stephen.rx782@gmail.com" className="text-primary hover:underline">
+                      stephen.rx782@gmail.com
+                    </a>
                   </p>
                   {file && (
                     <p className="text-sm text-primary font-semibold mt-2">
@@ -289,16 +292,27 @@ export default function Upload() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-8 text-center text-sm text-gray-600">
-          <p>
-            We typically respond within 24 hours. For urgent enquiries, please email us directly at{' '}
-            <a
-              href="mailto:stephen.rx782@gmail.com"
-              className="text-primary hover:text-blue-600 font-semibold"
-            >
-              stephen.rx782@gmail.com
-            </a>
-          </p>
+        <div className="mt-8 text-center">
+          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h3 className="font-semibold text-gray-900 mb-3">💡 For Best Results</h3>
+            <div className="text-sm text-gray-700 space-y-2">
+              <p>
+                <strong>Large 3D files (STL, OBJ)?</strong> Email them directly to{' '}
+                <a
+                  href="mailto:stephen.rx782@gmail.com"
+                  className="text-primary hover:text-blue-600 font-semibold underline"
+                >
+                  stephen.rx782@gmail.com
+                </a>
+              </p>
+              <p>
+                <strong>Small reference images?</strong> Use the form above (max 4MB)
+              </p>
+              <p className="text-gray-600 text-xs mt-3">
+                We typically respond within 24 hours
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
