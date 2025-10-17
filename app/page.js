@@ -73,21 +73,14 @@ export default function Home() {
             {/* Example Print 1 - Prototypes */}
             <Link href="/services/prototypes" className="group">
               <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center group-hover:from-blue-200 group-hover:to-blue-300 transition-colors duration-300">
-                  <svg
-                    className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    />
-                  </svg>
+                <div className="h-48 relative overflow-hidden bg-blue-50">
+                  <Image
+                    src="/prototypes.jpg"
+                    alt="3D Printed Prototypes"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">Prototypes</h4>
@@ -100,21 +93,14 @@ export default function Home() {
             {/* Example Print 2 - Custom Parts */}
             <Link href="/services/custom-parts" className="group">
               <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center group-hover:from-purple-200 group-hover:to-purple-300 transition-colors duration-300">
-                  <svg
-                    className="w-20 h-20 text-purple-600 group-hover:scale-110 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                    />
-                  </svg>
+                <div className="h-48 relative overflow-hidden bg-purple-50">
+                  <Image
+                    src="/custom-parts.webp"
+                    alt="Custom 3D Printed Parts"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent"></div>
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">Custom Parts</h4>
@@ -127,21 +113,14 @@ export default function Home() {
             {/* Example Print 3 - Art & Decor */}
             <Link href="/services/art-decor" className="group">
               <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="h-48 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center group-hover:from-pink-200 group-hover:to-pink-300 transition-colors duration-300">
-                  <svg
-                    className="w-20 h-20 text-pink-600 group-hover:scale-110 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                    />
-                  </svg>
+                <div className="h-48 relative overflow-hidden bg-pink-50">
+                  <Image
+                    src="/art-decor.jpg"
+                    alt="3D Printed Art and Decor"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 to-transparent"></div>
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">Art & Decor</h4>
@@ -154,21 +133,14 @@ export default function Home() {
             {/* Example Print 4 - Custom Gifts */}
             <Link href="/services/custom-gifts" className="group">
               <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
-                <div className="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center group-hover:from-green-200 group-hover:to-green-300 transition-colors duration-300">
-                  <svg
-                    className="w-20 h-20 text-green-600 group-hover:scale-110 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                    />
-                  </svg>
+                <div className="h-48 relative overflow-hidden bg-green-50">
+                  <Image
+                    src="/custom-gifts.jpg"
+                    alt="Custom 3D Printed Gifts"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">Custom Gifts</h4>
