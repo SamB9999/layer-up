@@ -1,9 +1,11 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-// Configure route to handle large files
+// Configure route to handle large files and prevent static optimization
 export const runtime = 'nodejs'
 export const maxDuration = 60
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 // POST handler for enquiry form submissions
 export async function POST(request) {
