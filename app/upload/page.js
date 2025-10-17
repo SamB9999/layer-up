@@ -51,6 +51,17 @@ export default function Upload() {
     }
   }
 
+  // Handle file removal
+  const handleRemoveFile = () => {
+    setFile(null)
+    setError('')
+    // Reset the file input
+    const fileInput = document.getElementById('file')
+    if (fileInput) {
+      fileInput.value = ''
+    }
+  }
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -239,9 +250,52 @@ export default function Upload() {
                     </a>
                   </p>
                   {file && (
-                    <p className="text-sm text-primary font-semibold mt-2">
-                      Selected: {file.name}
-                    </p>
+                    <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <svg
+                          className="w-5 h-5 text-green-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-semibold text-green-900">File attached:</p>
+                          <p className="text-sm text-green-700">{file.name}</p>
+                          <p className="text-xs text-green-600">
+                            {(file.size / 1024).toFixed(2)} KB
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleRemoveFile}
+                        className="ml-4 p-2 text-red-600 hover:bg-red-100 rounded-full transition-colors duration-200"
+                        aria-label="Remove file"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>
