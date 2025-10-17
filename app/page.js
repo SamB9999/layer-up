@@ -7,27 +7,16 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          {/* Logo/Brand */}
-          <div className="mb-6">
-            <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4">
-              Layer Up
-            </h1>
-            <div className="flex justify-center mb-6">
-              <svg
-                className="w-16 h-16 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                />
-              </svg>
-            </div>
+          {/* Logo */}
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/logo.png"
+              alt="Layer Up Logo"
+              width={200}
+              height={200}
+              className="w-auto h-32 sm:h-40 object-contain"
+              priority
+            />
           </div>
 
           {/* Hero Text */}
