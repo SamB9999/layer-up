@@ -13,6 +13,17 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    'text-purple-600',
+    'bg-purple-600',
+    'hover:bg-purple-700',
+    'text-pink-600',
+    'bg-pink-600',
+    'hover:bg-pink-700',
+    'text-green-600',
+    'bg-green-600',
+    'hover:bg-green-700',
+  ],
   plugins: [],
 }
 

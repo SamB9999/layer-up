@@ -106,28 +106,6 @@ export default function Upload() {
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        {/* Back Button */}
-        <Link
-          href="/"
-          className="inline-flex items-center text-primary hover:text-blue-600 mb-8 transition-colors duration-200"
-        >
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          Back to Home
-        </Link>
-
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white mb-4">
@@ -305,10 +283,10 @@ export default function Upload() {
           <p>
             We typically respond within 24 hours. For urgent enquiries, please email us directly at{' '}
             <a
-              href="mailto:sam.bousounis@gmail.com"
+              href="mailto:stephen.rx782@gmail.com"
               className="text-primary hover:text-blue-600 font-semibold"
             >
-              sam.bousounis@gmail.com
+              stephen.rx782@gmail.com
             </a>
           </p>
         </div>

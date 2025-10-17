@@ -70,101 +70,113 @@ export default function Home() {
             Example Prints
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Example Print 1 */}
-            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <svg
-                  className="w-20 h-20 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                  />
-                </svg>
+            {/* Example Print 1 - Prototypes */}
+            <Link href="/services/prototypes" className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center group-hover:from-blue-200 group-hover:to-blue-300 transition-colors duration-300">
+                  <svg
+                    className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">Prototypes</h4>
+                  <p className="text-sm text-gray-600 mb-2">High-precision prototypes for product development</p>
+                  <span className="text-sm text-primary font-semibold">Learn more →</span>
+                </div>
               </div>
-              <div className="p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Prototypes</h4>
-                <p className="text-sm text-gray-600">High-precision prototypes for product development</p>
-              </div>
-            </div>
+            </Link>
 
-            {/* Example Print 2 */}
-            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <svg
-                  className="w-20 h-20 text-secondary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                  />
-                </svg>
+            {/* Example Print 2 - Custom Parts */}
+            <Link href="/services/custom-parts" className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center group-hover:from-purple-200 group-hover:to-purple-300 transition-colors duration-300">
+                  <svg
+                    className="w-20 h-20 text-purple-600 group-hover:scale-110 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                    />
+                  </svg>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">Custom Parts</h4>
+                  <p className="text-sm text-gray-600 mb-2">Replacement parts and custom components</p>
+                  <span className="text-sm text-purple-600 font-semibold">Learn more →</span>
+                </div>
               </div>
-              <div className="p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Custom Parts</h4>
-                <p className="text-sm text-gray-600">Replacement parts and custom components</p>
-              </div>
-            </div>
+            </Link>
 
-            {/* Example Print 3 */}
-            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <svg
-                  className="w-20 h-20 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                  />
-                </svg>
+            {/* Example Print 3 - Art & Decor */}
+            <Link href="/services/art-decor" className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="h-48 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center group-hover:from-pink-200 group-hover:to-pink-300 transition-colors duration-300">
+                  <svg
+                    className="w-20 h-20 text-pink-600 group-hover:scale-110 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
+                    />
+                  </svg>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">Art & Decor</h4>
+                  <p className="text-sm text-gray-600 mb-2">Unique decorative pieces and artistic creations</p>
+                  <span className="text-sm text-pink-600 font-semibold">Learn more →</span>
+                </div>
               </div>
-              <div className="p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Art & Decor</h4>
-                <p className="text-sm text-gray-600">Unique decorative pieces and artistic creations</p>
-              </div>
-            </div>
+            </Link>
 
-            {/* Example Print 4 */}
-            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <svg
-                  className="w-20 h-20 text-secondary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+            {/* Example Print 4 - Custom Gifts */}
+            <Link href="/services/custom-gifts" className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+                <div className="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center group-hover:from-green-200 group-hover:to-green-300 transition-colors duration-300">
+                  <svg
+                    className="w-20 h-20 text-green-600 group-hover:scale-110 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
+                    />
+                  </svg>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">Custom Gifts</h4>
+                  <p className="text-sm text-gray-600 mb-2">Personalized gifts and special occasion items</p>
+                  <span className="text-sm text-green-600 font-semibold">Learn more →</span>
+                </div>
               </div>
-              <div className="p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Custom Gifts</h4>
-                <p className="text-sm text-gray-600">Personalized gifts and special occasion items</p>
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -101,10 +101,10 @@ export default function ThankYou() {
                 <p className="text-gray-600">
                   Feel free to reach out to us at{' '}
                   <a
-                    href="mailto:sam.bousounis@gmail.com"
+                    href="mailto:stephen.rx782@gmail.com"
                     className="text-primary hover:text-blue-600 font-semibold"
                   >
-                    sam.bousounis@gmail.com
+                    stephen.rx782@gmail.com
                   </a>
                   {' '}if you have any questions in the meantime.
                 </p>

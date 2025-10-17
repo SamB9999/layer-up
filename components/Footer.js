@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="flex items-center space-x-6">
             {/* Email Link */}
             <a
-              href="mailto:sam.bousounis@gmail.com"
+              href="mailto:stephen.rx782@gmail.com"
               className="flex items-center text-gray-600 hover:text-primary transition-colors duration-200"
               aria-label="Email us"
             >
